@@ -118,6 +118,7 @@ static MJKeywordTool *s_keywordTool = nil;
 - (void)fetchSuggestFor:(NSString *)aKeyword completion:(KeywordSuggestBlock)completion
 {
     // 拼接请求url
+    aKeyword = [aKeyword stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     NSString *serverUrl = [_serverUrl stringByReplacingOccurrencesOfString:@"{q}" withString:aKeyword];
     if ([serverUrl rangeOfString:@"{lg}"].length > 0) {
         serverUrl = [serverUrl stringByReplacingOccurrencesOfString:@"{lg}" withString:self.curLanguage];
