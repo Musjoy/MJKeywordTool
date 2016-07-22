@@ -1,0 +1,19 @@
+PODS:
+  - MJKeywordTool (0.1.0):
+    - ModuleCapability (~> 0.1.2)
+  - ModuleCapability (0.1.2)
+
+DEPENDENCIES:
+  - MJKeywordTool (from `../`)
+
+EXTERNAL SOURCES:
+  MJKeywordTool:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MJKeywordTool: 569b4ab9242a86f36f0883fad710fc44d58d0449
+  ModuleCapability: 35cea7154ff855362682e90ecf1be529a533c931
+
+PODFILE CHECKSUM: dc8c4a7f3d2f32737b216ec590c3fc74296cc3fb
+
+COCOAPODS: 1.0.1
