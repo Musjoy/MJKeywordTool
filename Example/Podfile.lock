@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  MJKeywordTool: 569b4ab9242a86f36f0883fad710fc44d58d0449
+  MJKeywordTool: 7866aebd4d34cddd980e1879af5a6cfec0de961e
   ModuleCapability: 35cea7154ff855362682e90ecf1be529a533c931
 
 PODFILE CHECKSUM: dc8c4a7f3d2f32737b216ec590c3fc74296cc3fb
