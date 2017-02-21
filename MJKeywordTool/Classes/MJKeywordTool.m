@@ -18,7 +18,7 @@
 #define FILE_NAME_SUGGEST_API   @"suggest_api"
 #endif
 
-#define DEFAULT_SUGGEST_URL @"http://suggestqueries.google.com/complete/search?output=firefox&hl={lg}&q={q}"
+#define DEFAULT_SUGGEST_URL @"https://suggestqueries.google.com/complete/search?output=firefox&hl={lg}&q={q}"
 
 static MJKeywordTool *s_keywordTool = nil;
 
