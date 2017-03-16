@@ -13,7 +13,7 @@ typedef void (^KeywordSuggestBlock)(NSString *theKeyword, NSArray *suggestList);
 
 @interface MJKeywordTool : NSObject
 
-+ (instancetype)shareInstance;
++ (instancetype)sharedInstance;
 
 - (void)suggestKeywordFor:(NSString *)aKeyword completion:(KeywordSuggestBlock)completion;
 

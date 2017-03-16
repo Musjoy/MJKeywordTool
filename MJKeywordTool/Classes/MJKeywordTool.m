@@ -32,7 +32,7 @@ static MJKeywordTool *s_keywordTool = nil;
 
 @implementation MJKeywordTool
 
-+ (instancetype)shareInstance
++ (instancetype)sharedInstance
 {
     static dispatch_once_t once_patch;
     dispatch_once(&once_patch, ^() {
