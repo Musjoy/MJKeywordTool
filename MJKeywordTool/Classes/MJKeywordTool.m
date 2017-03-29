@@ -74,7 +74,7 @@ static MJKeywordTool *s_keywordTool = nil;
 }
 
 
-- (void)reladAPI
+- (void)reloadAPI
 {
     NSDictionary *dicAPI = getFileData(FILE_NAME_SUGGEST_API);
     if (dicAPI) {
