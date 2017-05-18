@@ -10,9 +10,9 @@
 #ifdef MODULE_FILE_SOURCE
 #import "FileSource.h"
 #endif
-#ifdef MODULE_WEB_SERVICE
-#import "MJWebService.h"
-#endif
+
+#import HEADER_WEB_SERVICE
+
 
 #ifndef FILE_NAME_SUGGEST_API
 #define FILE_NAME_SUGGEST_API   @"suggest_api"
@@ -124,18 +124,16 @@ static MJKeywordTool *s_keywordTool = nil;
         serverUrl = [serverUrl stringByReplacingOccurrencesOfString:@"{lg}" withString:self.curLanguage];
     }
     
-#ifdef MODULE_WEB_SERVICE
-    [MJWebService startGet:serverUrl body:nil success:^(id respond) {
-        if ([respond isKindOfClass:[NSArray class]]) {
-            NSArray *arr = respond;
-            if (arr.count >= 2) {
-                completion(arr[0], arr[1]);
+    getServerUrl(serverUrl, ^(NSURLResponse *response, id data, NSError *error) {
+        if (!error) {
+            if ([data isKindOfClass:[NSArray class]]) {
+                NSArray *arr = data;
+                if (arr.count >= 2) {
+                    completion(arr[0], arr[1]);
+                }
             }
         }
-    } failure:^(NSError *error) {
-        
-    }];
-#endif
+    });
     
 }
 
